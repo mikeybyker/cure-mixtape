@@ -3,20 +3,20 @@
     ".read": "auth != null",
     ".write": "false",
     "playlists": {
-        ".read": "false",
-        "$id": {
-          // Let non existant be written, but once there, only owner
-          ".write": "!data.hasChild('owner') || data.child('owner').val() == auth.uid"
-        }
+      ".read": "false",
+      "$id": {
+        // Let non existant be written, but once there, only owner
+        ".write": "!data.hasChild('owner') || data.child('owner').val() == auth.uid"
+      }
     },
     "artist":{
-       ".read": "true",
-       ".write": "false",
-       "$artist":{
-         "discog":{
-           ".indexOn": ["title", "format"]
-         }
-       }
+      ".read": "true",
+      ".write": "false",
+      "$artist":{
+        "discog":{
+          ".indexOn": ["title", "format"]
+        }
+      }
     },
     "users": {
       "$uid": {

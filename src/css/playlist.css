@@ -53,7 +53,6 @@
   {
     margin-right: 2px;
   }
-
   .totalLength
   {
     position: absolute;
@@ -148,7 +147,6 @@
     {
       color: #cc181e;
     }
-
     .playlist.wish ol.full li:last-of-type a,
     .playlist.kissme ol.full li:last-of-type a
     {
@@ -160,6 +158,7 @@
 {
   opacity: 0;
 }
+/* React animation */
 .covergroup-enter > *
 {
   opacity: 1;
@@ -184,29 +183,29 @@
 /*custom li's for pornography cover*/
 .porn ol
 {
-  counter-reset:li;
-  margin-left:0;
-  padding-left:0;
+  counter-reset: li;
+  margin-left: 0;
+  padding-left: 0;
 }
   .porn ol > li
   {
-    position:relative;
-    margin:0 0 6px 20px;
-    padding:2px 4px;
-    list-style:none;
+    position: relative;
+    margin: 0 0 6px 20px;
+    padding: 2px 4px;
+    list-style: none;
   }
     .porn ol > li:before
     {
-      content:counter(li);
-      counter-increment:li;
-      position:absolute;
-      top:-2px;
-      left:-2rem;
-      box-sizing:border-box;
-      width:22px;
-      margin-right:8px;
-      padding:2px;
-      border:1px solid #fff;
-      color:#fff;
-      text-align:center;
+      content: counter(li);
+      counter-increment: li;
+      position: absolute;
+      top: -2px;
+      left: -2rem;
+      box-sizing: border-box;
+      width: 22px;
+      margin-right: 8px;
+      padding: 2px;
+      border: 1px solid #fff;
+      color: #fff;
+      text-align: center;
     }

@@ -2,6 +2,19 @@
   "name": "cure-mixtape",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "description": "It's a Cure Mix CD really. Pick an album, select a track, add it to your own playlist.",
+  "author": "mikeybyker+github@gmail.com",
+  "keywords": [
+    "react",
+    "reactjs",
+    "firebase",
+    "the cure"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeybyker/cure-mixtape.git"
+  },
   "devDependencies": {
     "react-scripts": "0.6.1"
   },

@@ -43,14 +43,18 @@ class View extends React.Component {
         <div className="top-bar-left">
           <ul className="dropdown menu">
             <li>
-              <Link to="/"><img src={logo} className="cure-logo" width="160" height="62" alt="home" /></Link>
+              <Link to="/">
+                <img src={logo} className="cure-logo" width="160" height="62" alt="home" />
+              </Link>
             </li>
             <li className="menu-text">{title}</li>           
           </ul>
         </div>
         <div className="top-bar-right">
           <ul className="menu">
-             <li className="menu-text"><Link to="/about" activeClassName="active">About</Link></li>
+            <li className="menu-text">
+              <Link to="/about" activeClassName="active">About</Link>
+            </li>
           </ul>
         </div>
       </div>

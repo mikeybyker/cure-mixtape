@@ -1,3 +1,4 @@
+/* Yep, a little over the top with the fonts. But they look nice on the covers :-) */
 @import 'https://fonts.googleapis.com/css?family=Catamaran:500|Dancing+Script|Roboto+Mono|Caveat';
 
 html, body
@@ -10,7 +11,9 @@ html, body
   font-size: 16px;
 }
 body,
-#main, #main > div, #main > div > div /* For react generated divs / root */
+#main,
+#main > div,
+#main > div > div /* For react generated divs / root */
 {
   height: auto !important;
   display: flex;
@@ -96,7 +99,6 @@ a
 .button[disabled]:hover
 {
     background-color: transparent;
-    /*color: #fefefe;*/
 }
 
 /* Tracks*/
