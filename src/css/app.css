@@ -1,0 +1,41 @@
+.menu .active > a
+{
+    color: ##85bf6b;
+    background: none;
+}
+
+/* Login */
+.login-image
+{
+   left: 0;
+   top: 0;
+}
+.panel.login-panel
+{
+  position: relative;
+  background-image: url('../img/cure.png');
+  background-size: cover;
+  margin-top: 50px;
+  min-height: 500px;  
+}
+
+.login-buttons
+{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+}
+  .login-buttons .button
+  {
+    width: 100px;
+  }
+
+  .button.secondary
+  {
+    background-color: #777;
+    color: #fefefe;
+  }

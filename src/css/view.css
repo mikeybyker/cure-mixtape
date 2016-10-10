@@ -1,0 +1,12 @@
+.playlist.view
+{
+  transition: none; 
+}
+.content.view .playlist
+{
+  margin: 2rem auto;
+}
+.content.view .playlist.waiting
+{
+  opacity: 0;
+}

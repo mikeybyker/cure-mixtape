@@ -1,0 +1,212 @@
+.playlist
+{
+  position: relative;
+  font-family: 'Catamaran', sans-serif;
+  background: transparent url(../img/covers.png) no-repeat 0 0;
+  width: 500px;
+  height: 500px; 
+  transition:background-position 1s, transform 0.5s; 
+}
+    .faith
+    {
+      background-position: 0 0;
+      font-family: 'Catamaran', sans-serif;
+      color: #999;
+    }
+    .heaven
+    {
+      background-position: -500px 0;  
+      font-family: 'Dancing Script', cursive; 
+      color: #000;   
+    }
+    .wish
+    {
+      background-position: -1000px 0;
+      font-family: 'Catamaran', sans-serif;
+      color: #fff;    
+    }
+    .kissme
+    {
+      background-position: -1500px 0;
+      font-family: 'Caveat', cursive;
+      color: #fff;    
+    }
+    .porn
+    {
+      background-position: -2000px 0;
+      font-family: 'Roboto Mono', monospace;
+      color: #fff;    
+    }
+
+
+.playlist-group
+{
+  display: inline-block;
+  position: relative;
+  top: -21px;
+}
+  .playlist-group .text-right button.button
+  {
+    margin-bottom: 2px;
+  }
+  .playlist-group .text-right button.button:first-of-type
+  {
+    margin-right: 2px;
+  }
+
+  .totalLength
+  {
+    position: absolute;
+    width: 120px;
+    right: 25px;
+    top: 33px;
+    
+  }
+  .playlist.faith .totalLength
+  {
+    right: 25px;
+    top: 33px;
+    color: #666;
+  }
+  .playlist.heaven .totalLength
+  {
+    right: 158px;
+    top: 418px;
+    color: #000;
+  }
+  .playlist.wish .totalLength
+  {
+    color: #fff;
+    top: 460px;
+    right: 165px;
+  }
+  .playlist.kissme .totalLength
+  {
+    color: #fff;
+    top: 30px;
+    right: 370px;
+  }
+  .playlist.porn .totalLength
+  {
+    color: #fff;
+    top: 465px;
+    right: 15px;
+    font-size: 14px;
+  }
+    .totalLength.warning
+    {
+      color: #cc181e;
+    }
+  .playlist ol
+  {
+    position: absolute;
+    margin: 0;
+    list-style: none;
+  }
+
+    .playlist.faith ol
+    {
+      left: 83px;
+      top: 65px;
+      text-transform: lowercase;
+    }
+    .playlist.heaven ol
+    {
+      left: 153px;
+      top: 74px;
+    }
+    .playlist.wish ol
+    {
+      left: 25px;
+      top: 25px;
+    }
+    .playlist.kissme ol
+    {
+      left: 315px;
+      top: 65px;
+    }
+    .playlist.porn ol
+    {
+      left: 25px;
+      top: 25px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .playlist ol li
+    {
+      line-height: 1.2;
+    }
+      .playlist ol li a
+      {
+        color: inherit;
+      }
+      .playlist ol li a:hover
+      {
+        text-decoration: line-through;
+      }
+    .playlist ol.full li:last-of-type a
+    {
+      color: #cc181e;
+    }
+
+    .playlist.wish ol.full li:last-of-type a,
+    .playlist.kissme ol.full li:last-of-type a
+    {
+      color: #000;
+    }
+
+/* Prevent the flicker of text in ff... Actually, makes it smoother for all */
+.playlist-group .playlist .covergroup-enter ol
+{
+  opacity: 0;
+}
+.covergroup-enter > *
+{
+  opacity: 1;
+  transition: opacity 1s 1s;
+}
+.covergroup-enter.covergroup-enter-active > *
+{
+  opacity: 0;
+  transition: none 1s 1s;
+}
+.covergroup-leave > *
+{
+  opacity: 0;
+  transition: all 1s;
+}
+.covergroup-leave.covergroup-leave-active > *
+{
+  opacity: 1;
+  transition: all 1s;
+}
+
+/*custom li's for pornography cover*/
+.porn ol
+{
+  counter-reset:li;
+  margin-left:0;
+  padding-left:0;
+}
+  .porn ol > li
+  {
+    position:relative;
+    margin:0 0 6px 20px;
+    padding:2px 4px;
+    list-style:none;
+  }
+    .porn ol > li:before
+    {
+      content:counter(li);
+      counter-increment:li;
+      position:absolute;
+      top:-2px;
+      left:-2rem;
+      box-sizing:border-box;
+      width:22px;
+      margin-right:8px;
+      padding:2px;
+      border:1px solid #fff;
+      color:#fff;
+      text-align:center;
+    }

@@ -1,0 +1,142 @@
+@import 'https://fonts.googleapis.com/css?family=Catamaran:500|Dancing+Script|Roboto+Mono|Caveat';
+
+html, body
+{
+  background-color: #222 !important;
+  margin: 0;
+  padding: 0;
+  color: #999;
+  line-height: 1.333;
+  font-size: 16px;
+}
+body,
+#main, #main > div, #main > div > div /* For react generated divs / root */
+{
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+footer
+{
+  padding-top: 2rem;
+}
+a
+{
+  color: white;
+}
+    a:hover,
+    a:focus
+    {
+      color: #85bf6b;
+    }
+
+.content
+{
+    flex: 1 0;
+}
+
+/* Top bar*/
+.top-bar,
+.top-bar ul
+{
+    background-color: #000;
+}
+  .top-bar .top-bar-left
+  {
+      flex: 1 1 auto;
+  }
+  .top-bar .top-bar-right
+  {
+      flex: 0 1 auto;
+  }
+  .top-bar .logo a
+  {
+    padding: 0;
+  }
+  .top-bar h1,
+  .top-bar a
+  {
+      color: #fff;
+  }
+    .top-bar a:hover,
+    .top-bar a:focus
+    {
+      color: #85bf6b;
+    }
+  .top-bar-right .menu button,
+  .top-bar-right .menu a
+  {
+    margin-top: 0;
+  }
+.cure-logo
+{
+  margin-top: -15px;
+  height: 62px;
+}
+.button.hollow
+{
+  border: 1px solid #fff;
+  color: #fff;
+}
+.button.hollow:hover,
+.button.hollow:focus
+{
+  border-color: #999;
+  color: #999;
+}
+.button.hollow:focus
+{
+    border-color: #fff;
+    color: #fff;
+}
+.button.disabled:focus,
+.button.disabled:hover,
+.button[disabled]:focus,
+.button[disabled]:hover
+{
+    background-color: transparent;
+    /*color: #fefefe;*/
+}
+
+/* Tracks*/
+.tracks.full a
+{
+  cursor: default;
+}
+  .tracks.full a:hover
+  {
+    color: #fff;
+  }
+
+/* Slides */
+.slider
+{
+  margin: 1rem 0;
+  background-color: transparent;
+}
+  .slide
+  {
+    width: 150px;
+    min-height: 210px;
+  }
+    .slide .title
+    {
+      font-size: 13px;
+      color: #fff;
+    }
+    .slide .releaseDate
+    {
+      font-size: 11px;
+      color: #999;
+    }
+    .slide .cover
+    {
+      margin-bottom: 6px;
+      width: 150px;
+      height: 150px;
+    }
+    .slide:hover
+    {
+      background-color: #000;
+    }
