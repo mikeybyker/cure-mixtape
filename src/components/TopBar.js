@@ -38,7 +38,7 @@ class TopBar extends React.Component {
               <li className="logo">
                 {logoLink}
               </li>
-              {mailTo}       
+              {mailTo}
             </ul>
           </div>
 

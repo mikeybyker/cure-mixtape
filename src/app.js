@@ -81,10 +81,11 @@ class App extends React.Component {
 
   loadPlaylist(playlistId){
     const discogRef = base.database().ref(`playlists/${playlistId}`);
+    const defaultData = {tracks:{}, cover: 'faith', owner: this.state.uid, displayName: this.state.displayName};
     discogRef
       .orderByChild('stamp')
       .once('value', (snapshot) => {
-        const data = snapshot.val() || {tracks:{}, cover: 'faith', owner: this.state.uid, displayName: this.state.displayName};
+        const data = snapshot.val() || defaultData;
         this.setState({
           playlist: data
         });
@@ -100,15 +101,13 @@ class App extends React.Component {
       then: this.updateCDLength,
       queries: {orderByChild: 'stamp'} // doesn't work. limitToLast: 3 does.
     });
-    // Now necc (damn) - else syncs to empty (even though I bloody add it!)
-    this.setState({playlist:this.state.playlist});
-    // This is fairly dumb. Why need to save when I set a default/init state?
-    // Why is that not saved on first sync/save?
+    // Seems a little dumb. Should be saved on first sync, but isn't - so force it...
+    this.setState({playlist:this.state.playlist});    
   }
 
   updateCDLength(playlist){
     playlist = playlist && playlist.tracks ? playlist : this.state.playlist;
-    let mixStatus = this.getPlaylistLength(playlist);
+    const mixStatus = this.getPlaylistLength(playlist);
     this.setState({mixStatus});
   }
 
@@ -190,16 +189,6 @@ class App extends React.Component {
       return {valid: false, minutes: minutes, over: over};
     }
     return {valid: true, minutes: minutes, over: 0};
-  }
-
-  renderVisHelper(){
-    return (
-      <div className="">
-        <p className="show-for-small-only">You are <em>definitely</em> on a small screen.</p>
-        <p className="show-for-medium-only">You are <em>definitely</em> on a medium screen.</p>
-        <p className="show-for-large-only">You are <em>definitely</em> on a large screen.</p>
-      </div>
-    );
   }
 
   render() {
